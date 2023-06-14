@@ -64,7 +64,7 @@ function init() {
         console.log(fileData);
 
         //pass file data to write function, which create the README file
-        //writeToFile('README.md', fileData);
+        writeToFile('README.md', fileData);
     });
 };
 
