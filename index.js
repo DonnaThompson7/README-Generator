@@ -60,9 +60,10 @@ function init() {
         console.log(response);
 
         //call function in generateMarkdown.js to create content of README.md file by applying markdown to answers above
-        //const fileData = generateMarkdown(questions);
+        const fileData = generateMarkdown(response);
+        console.log(fileData);
 
-        //pass file data to write function
+        //pass file data to write function, which create the README file
         //writeToFile('README.md', fileData);
     });
 };
