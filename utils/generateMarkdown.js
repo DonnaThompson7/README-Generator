@@ -44,6 +44,20 @@ Licensed under [ISC License (ISC)](https://opensource.org/licenses/ISC).`
       }
   }
 
+// Function that returns the Demo Video section of README. If no screenshot, use placeholder image.
+//If no video, do not have a Video Demo section. 
+function renderDemoSection(title,screenshot,video) {
+  if (!screenshot) {
+    screenshot = './assets/images/video_screenshot_placeholder.jpg'
+  }
+  if (video) {
+    return `### **Watch a demo of the ${title}:**
+[![demo of the ${title}](${screenshot})](${video})`
+  } else {
+    return '';
+  }
+}
+
 // function to generate markdown for README. 
 function generateMarkdown(data) {
   return `# **${data.title}**
@@ -67,8 +81,7 @@ function generateMarkdown(data) {
   ## **Usage**
   ${data.usage}
 
-  ### **Watch a demo of the ${data.title}:**
-  [![demo of the ${data.title}](${data.screenshot})](${data.video})
+  ${renderDemoSection(data.title,data.screenshot,data.video)}
 
   ## **Contributing**
   ${data.contribution}
