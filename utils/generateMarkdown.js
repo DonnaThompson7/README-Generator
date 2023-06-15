@@ -28,16 +28,16 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
     switch (license) {
       case "MIT":
-          return `## License
+          return `## **License**
 Licensed under [The MIT License](https://opensource.org/licenses/MIT).`
       case "GNU GPLv3":
-          return `## License
+          return `## **License**
 Licensed under [GNU GPL v3 License](https://www.gnu.org/licenses/gpl-3.0).`
       case "Apache License 2.0":
-          return `## License
+          return `## **License**
 Licensed under [Apache 2.0 License](https://opensource.org/licenses/Apache-2.0).`
       case "ISC License":
-          return `## License 
+          return `## **License**
 Licensed under [ISC License (ISC)](https://opensource.org/licenses/ISC).`
       default:
           return '';
@@ -46,14 +46,14 @@ Licensed under [ISC License (ISC)](https://opensource.org/licenses/ISC).`
 
 // function to generate markdown for README. 
 function generateMarkdown(data) {
-  return `# ${data.title}
+  return `# **${data.title}**
 
   ${renderLicenseBadge(data.license)}
 
-  ## Description 
+  ## **Description**
   ${data.description}
 
-  ## Table of Contents
+  ## **Table of Contents:**
   * [Installation](#installation)
   * [Usage](#usage)
   * [Contributing](#contributing)
@@ -61,22 +61,25 @@ function generateMarkdown(data) {
   ${renderLicenseLink(data.license)}
   * [Questions](#questions)
 
-  ## Installation
+  ## **Installation**
   ${data.installation}
 
-  ## Usage
+  ## **Usage**
   ${data.usage}
 
-  ## Contributing
+  ### **Watch a demo of the ${data.title}:**
+  [![demo of the ${data.title}](./assets/images/Demo_Screenshot.png)](https://drive.google.com/file/d/1ajYWJxmVhOTP3DGe1iuF0zyxpeFBn6v2/view)
+
+  ## **Contributing**
   ${data.contribution}
 
-  ## Tests
+  ## **Tests**
   ${data.testSet}
 
   ${renderLicenseSection(data.license)}
 
-  ## Questions
-  Please visit my GitHub profile at https://github.com/${data.gitHubUserName} <br /> Please contact me at ${data.email} to report issues or if you have additional questions.
+  ## **Questions**
+  Please visit my GitHub profile at https://github.com/${data.gitHubUserName} <br /> Contact me at ${data.email} to report issues or if you have additional questions.
 `;
 }
 
