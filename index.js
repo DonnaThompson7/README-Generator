@@ -42,7 +42,7 @@ function init() {
         type: 'list',         
         message: 'Please select the license for your application from the list:',      
         name: 'license',         
-        choices: ["MIT", "GNU GPLv3", "Apache License 2.0", "ISC License"],    
+        choices: ["MIT", "GNU GPLv3", "Apache License 2.0", "ISC License", "None"],    
      },
      {
         type: 'input',         
