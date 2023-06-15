@@ -68,7 +68,7 @@ function generateMarkdown(data) {
   ${data.usage}
 
   ### **Watch a demo of the ${data.title}:**
-  [![demo of the ${data.title}](./assets/images/Demo_Screenshot.png)](https://drive.google.com/file/d/1ajYWJxmVhOTP3DGe1iuF0zyxpeFBn6v2/view)
+  [![demo of the ${data.title}](${data.screenshot})](${data.video})
 
   ## **Contributing**
   ${data.contribution}
