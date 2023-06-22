@@ -51,7 +51,7 @@ function renderDemoSection(title,screenshot,video) {
     screenshot = './assets/images/video_screenshot_placeholder.jpg'
   }
   if (video) {
-    return `### **Watch a demo of the ${title}:**
+    return `### **Demo of how to use the ${title}:**
 [![demo of the ${title}](${screenshot})](${video})`
   } else {
     return '';
@@ -70,7 +70,8 @@ function generateMarkdown(data) {
   ## **Table of Contents:**
   * [Installation](#installation)
   * [Usage](#usage)
-  * [Contributing](#contributing)
+  * [Credits](#credits)
+  * [Contribute](#contribute)
   * [Tests](#tests)
   ${renderLicenseLink(data.license)}
   * [Questions](#questions)
@@ -83,7 +84,10 @@ function generateMarkdown(data) {
 
   ${renderDemoSection(data.title,data.screenshot,data.video)}
 
-  ## **Contributing**
+  ## **Credits**
+  ${data.credits}
+
+  ## **Contribute**
   ${data.contribution}
 
   ## **Tests**

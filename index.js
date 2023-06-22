@@ -40,6 +40,11 @@ function init() {
      },
      {
       type: 'input',         
+      message: 'Please enter developer, collaborators and credits:',     
+      name: 'credits', 
+     },
+     {
+      type: 'input',         
       message: 'Please enter contribution guidelines:',     
       name: 'contribution', 
      },
